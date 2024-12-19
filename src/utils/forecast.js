@@ -9,9 +9,11 @@ const forecast = (longitude, latitude, callback) => {
         } else if(body.error) {
             callback('Cant find location', undefined)  
         } else {
+            log(body.current.temperature)
             callback(undefined, {
                 Temp: body.current.temperature,
-                feels_like: body.current.feelslike
+                feels_like: body.current.feelslike,
+                humidity: body.current.humidity
             })
         }
     })

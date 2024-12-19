@@ -23,7 +23,7 @@ app.get('', (req, res) => {
         name: 'petran'
     })
 })
-z
+
 app.get('/help', (req, res) => { 
     res.render('help', {
         title: 'help',
